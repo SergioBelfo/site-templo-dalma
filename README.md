@@ -31,18 +31,20 @@ Entregar a Fase 1 com as seguintes páginas/áreas:
 
 ## Estrutura do Projeto
 
+```
 /
-index.html
-o-que-se-faz.html
-eventos.html
-espaco.html
-contactos.html
-assets/
-css/
-styles.css
-js/
-main.js
-img/
-content/
-events/
-settings/
+  index.html
+  o-que-se-faz.html
+  eventos.html
+  espaco.html
+  contactos.html
+  assets/
+    css/
+      styles.css
+    js/
+      main.js
+    img/
+  content/
+    events/
+    settings/
+```
