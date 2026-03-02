@@ -1,1 +1,231 @@
-﻿<!doctype html><html><head><meta charset='utf-8'><title>Templo d'Alma</title></head><body><h1>Site em construção</h1></body></html>
+﻿<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Templo d’Alma — espaço de bem-estar, práticas e encontros." />
+  <title>Templo d’Alma</title>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Templo d’Alma — Início">
+        <span class="brand-mark" aria-hidden="true">◉</span>
+        <span class="brand-text">Templo d’Alma</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-principal">
+        Menu
+      </button>
+
+      <nav id="nav-principal" class="site-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#o-que-se-faz">O que se faz</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#horarios">Horários</a></li>
+          <li><a href="#contactos">Contactos</a></li>
+        </ul>
+      </nav>
+
+      <a class="header-cta" href="#contactos">Contactar</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title">Um espaço para reconectar contigo.</h1>
+          <p class="hero-subtitle">
+            Práticas, encontros e momentos de presença. Um templo de calma, propósito e comunidade.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#horarios">Ver Horários</a>
+            <a class="btn btn-secondary" href="#eventos">Ver Eventos</a>
+          </div>
+
+          <ul class="hero-highlights" aria-label="Destaques">
+            <li>Práticas guiadas</li>
+            <li>Eventos regulares</li>
+            <li>Ambiente acolhedor</li>
+          </ul>
+        </div>
+
+        <div class="hero-media" aria-hidden="true">
+          <!-- Mais tarde: imagem real -->
+          <div class="hero-placeholder">Imagem/Foto do espaço</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- O QUE SE FAZ (TEASERS) -->
+    <section id="o-que-se-faz" class="section" aria-labelledby="oqsf-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="oqsf-title">O que se faz</h2>
+          <p>Um conjunto de práticas e experiências para bem-estar, foco e equilíbrio.</p>
+        </header>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Prática 1</h3>
+            <p>Descrição curta e clara (1–2 linhas).</p>
+            <a class="card-link" href="pages/o-que-se-faz.html">Saber mais</a>
+          </article>
+
+          <article class="card">
+            <h3>Prática 2</h3>
+            <p>Descrição curta e clara (1–2 linhas).</p>
+            <a class="card-link" href="pages/o-que-se-faz.html">Saber mais</a>
+          </article>
+
+          <article class="card">
+            <h3>Prática 3</h3>
+            <p>Descrição curta e clara (1–2 linhas).</p>
+            <a class="card-link" href="pages/o-que-se-faz.html">Saber mais</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA PREVIEW -->
+    <section id="galeria" class="section" aria-labelledby="galeria-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="galeria-title">Galeria</h2>
+          <p>Um vislumbre do espaço e dos momentos partilhados.</p>
+        </header>
+
+        <div class="gallery-grid" aria-label="Pré-visualização da galeria">
+          <!-- Trocar por imagens reais quando existirem -->
+          <div class="gallery-item">Foto</div>
+          <div class="gallery-item">Foto</div>
+          <div class="gallery-item">Foto</div>
+          <div class="gallery-item">Foto</div>
+          <div class="gallery-item">Foto</div>
+          <div class="gallery-item">Foto</div>
+        </div>
+
+        <div class="section-actions">
+          <a class="btn btn-secondary" href="pages/galeria.html">Ver Galeria</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTOS PREVIEW -->
+    <section id="eventos" class="section" aria-labelledby="eventos-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="eventos-title">Eventos</h2>
+          <p>Encontros e atividades. Consulta os próximos.</p>
+        </header>
+
+        <div class="list">
+          <article class="list-item">
+            <h3>Evento A</h3>
+            <p><time datetime="2026-03-10">10 Mar 2026</time> · 19:00</p>
+          </article>
+          <article class="list-item">
+            <h3>Evento B</h3>
+            <p><time datetime="2026-03-17">17 Mar 2026</time> · 19:00</p>
+          </article>
+          <article class="list-item">
+            <h3>Evento C</h3>
+            <p><time datetime="2026-03-24">24 Mar 2026</time> · 19:00</p>
+          </article>
+        </div>
+
+        <div class="section-actions">
+          <a class="btn btn-secondary" href="pages/eventos.html">Ver todos os Eventos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HORÁRIOS PREVIEW -->
+    <section id="horarios" class="section" aria-labelledby="horarios-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="horarios-title">Horários</h2>
+          <p>Consulta os horários regulares (sujeitos a alterações em eventos especiais).</p>
+        </header>
+
+        <div class="table-wrap" role="region" aria-label="Tabela de horários" tabindex="0">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Dia</th>
+                <th scope="col">Horário</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Seg–Sex</th><td>18:00 – 21:00</td></tr>
+              <tr><th scope="row">Sábado</th><td>10:00 – 13:00</td></tr>
+              <tr><th scope="row">Domingo</th><td>Encerrado</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-actions">
+          <a class="btn btn-secondary" href="pages/horarios.html">Ver detalhes</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTOS -->
+    <section id="contactos" class="section" aria-labelledby="contactos-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="contactos-title">Contactos</h2>
+          <p>Fala connosco para marcações, dúvidas ou informações.</p>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Mensagem</h3>
+            <ul>
+              <li><a href="mailto:exemplo@temploalma.pt">exemplo@temploalma.pt</a></li>
+              <li><a href="tel:+351000000000">+351 000 000 000</a></li>
+              <li><a href="#" aria-label="WhatsApp (a definir)">WhatsApp</a></li>
+            </ul>
+          </div>
+
+          <div class="contact-card">
+            <h3>Localização</h3>
+            <p>Morada (a definir)</p>
+            <p><a href="#" aria-label="Abrir mapa (a definir)">Ver no mapa</a></p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Redes</h3>
+            <ul>
+              <li><a href="#" aria-label="Instagram (a definir)">Instagram</a></li>
+              <li><a href="#" aria-label="Facebook (a definir)">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="ano"></span> Templo d’Alma. Todos os direitos reservados.</p>
+      <nav aria-label="Links do rodapé">
+        <ul>
+          <li><a href="pages/contactos.html">Contactos</a></li>
+          <li><a href="#" aria-label="Política de Privacidade (placeholder)">Privacidade</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

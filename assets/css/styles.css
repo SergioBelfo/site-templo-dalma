@@ -1,0 +1,53 @@
+:root { --max: 1100px; }
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.5; }
+a { color: inherit; }
+
+.container { width: min(var(--max), calc(100% - 2rem)); margin: 0 auto; }
+
+.skip-link {
+  position: absolute; left: -999px; top: 0; padding: .5rem .75rem; background: #fff;
+}
+.skip-link:focus { left: 1rem; top: 1rem; z-index: 9999; }
+
+.site-header { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #eee; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .75rem 0; }
+.site-nav ul { display: flex; gap: 1rem; list-style: none; padding: 0; margin: 0; }
+.nav-toggle { display: none; }
+
+.hero { padding: 3rem 0; border-bottom: 1px solid #eee; }
+.hero-inner { display: grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items: center; }
+.hero-placeholder { border: 1px dashed #bbb; padding: 4rem 1rem; text-align: center; }
+
+.section { padding: 3rem 0; border-bottom: 1px solid #f1f1f1; }
+.section-header { margin-bottom: 1.25rem; }
+
+.cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.card { border: 1px solid #eee; padding: 1rem; border-radius: .75rem; }
+
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; }
+.gallery-item { border: 1px solid #eee; padding: 2.5rem 1rem; border-radius: .75rem; text-align: center; }
+
+.list { display: grid; gap: .75rem; }
+.list-item { border: 1px solid #eee; padding: 1rem; border-radius: .75rem; }
+
+.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.contact-card { border: 1px solid #eee; padding: 1rem; border-radius: .75rem; }
+
+.btn { display: inline-block; padding: .6rem .9rem; border: 1px solid #ddd; border-radius: .75rem; text-decoration: none; }
+.btn-primary { border-color: #111; }
+.section-actions { margin-top: 1rem; }
+
+.site-footer { padding: 2rem 0; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-top: 1px solid #eee; padding-top: 1rem; }
+.site-footer ul { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; }
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .cards-grid, .gallery-grid, .contact-grid { grid-template-columns: 1fr; }
+  .nav-toggle { display: inline-block; }
+  .site-nav { display: none; }
+  .site-nav.is-open { display: block; }
+  .site-nav ul { flex-direction: column; padding: .75rem 0; }
+}
