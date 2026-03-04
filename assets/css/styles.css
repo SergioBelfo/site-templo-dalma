@@ -80,7 +80,12 @@ h2 { font-size: 1.8rem; margin: 0 0 var(--space-sm); }
 /* =========================
    7) Hero
    ========================= */
-.hero { padding: 5rem 0; border-bottom: 1px solid #eee; }
+/* HERO */
+
+.hero {
+  padding: 6rem 0;
+  border-bottom: 1px solid #eee;
+}
 
 .hero-inner {
   display: grid;
@@ -89,7 +94,29 @@ h2 { font-size: 1.8rem; margin: 0 0 var(--space-sm); }
   align-items: center;
 }
 
-.hero-subtitle { max-width: 480px; }
+.hero-copy h1 {
+  font-size: 3rem;
+  max-width: 600px;
+}
+
+.hero-subtitle {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 480px;
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-highlights {
+  margin-top: 2rem;
+  padding-left: 1.2rem;
+  color: #666;
+}
 
 .hero-placeholder {
   border: 1px dashed #bbb;
