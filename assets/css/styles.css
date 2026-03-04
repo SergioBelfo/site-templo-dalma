@@ -1,28 +1,125 @@
-:root { --max: 1100px; }
+/* =========================
+   1) Design Tokens (variáveis)
+   ========================= */
+:root {
+  --max-width: 1100px;
 
+  --color-primary: #1c1c1c;
+  --color-accent: #8c6a3f;
+  --color-bg: #ffffff;
+  --color-soft: #f6f6f6;
+  --color-border: #e5e5e5;
+
+  --font-main: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 4rem;
+}
+
+/* =========================
+   2) Base / Reset leve
+   ========================= */
 * { box-sizing: border-box; }
-body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.5; }
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--color-primary);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
 a { color: inherit; }
 
-.container { width: min(var(--max), calc(100% - 2rem)); margin: 0 auto; }
+img { max-width: 100%; display: block; }
 
+/* =========================
+   3) Layout helpers
+   ========================= */
+.container {
+  width: min(var(--max-width), calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.section {
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+/* =========================
+   4) Acessibilidade
+   ========================= */
 .skip-link {
-  position: absolute; left: -999px; top: 0; padding: .5rem .75rem; background: #fff;
+  position: absolute; left: -999px; top: 0;
+  padding: .5rem .75rem; background: #fff;
 }
 .skip-link:focus { left: 1rem; top: 1rem; z-index: 9999; }
 
+/* =========================
+   5) Tipografia
+   ========================= */
+h1 { font-size: 2.6rem; line-height: 1.2; margin: 0 0 var(--space-sm); }
+h2 { font-size: 1.8rem; margin: 0 0 var(--space-sm); }
+
+.section-header { margin-bottom: var(--space-md); }
+.section-header p { max-width: 550px; color: #555; margin: 0; }
+
+/* =========================
+   6) Header / Nav
+   ========================= */
 .site-header { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #eee; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .75rem 0; }
+
 .site-nav ul { display: flex; gap: 1rem; list-style: none; padding: 0; margin: 0; }
+
 .nav-toggle { display: none; }
 
-.hero { padding: 3rem 0; border-bottom: 1px solid #eee; }
-.hero-inner { display: grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items: center; }
-.hero-placeholder { border: 1px dashed #bbb; padding: 4rem 1rem; text-align: center; }
+/* =========================
+   7) Hero
+   ========================= */
+.hero { padding: 5rem 0; border-bottom: 1px solid #eee; }
 
-.section { padding: 3rem 0; border-bottom: 1px solid #f1f1f1; }
-.section-header { margin-bottom: 1.25rem; }
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 2rem;
+  align-items: center;
+}
 
+.hero-subtitle { max-width: 480px; }
+
+.hero-placeholder {
+  border: 1px dashed #bbb;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+/* =========================
+   8) Componentes (botões, cards, etc.)
+   ========================= */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.btn-secondary {
+  background: transparent;
+}
+
+/* Cards / grids */
 .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .card { border: 1px solid #eee; padding: 1rem; border-radius: .75rem; }
 
@@ -35,17 +132,27 @@ a { color: inherit; }
 .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .contact-card { border: 1px solid #eee; padding: 1rem; border-radius: .75rem; }
 
-.btn { display: inline-block; padding: .6rem .9rem; border: 1px solid #ddd; border-radius: .75rem; text-decoration: none; }
-.btn-primary { border-color: #111; }
-.section-actions { margin-top: 1rem; }
-
+/* =========================
+   9) Footer
+   ========================= */
 .site-footer { padding: 2rem 0; }
-.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-top: 1px solid #eee; padding-top: 1rem; }
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
 .site-footer ul { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; }
 
+/* =========================
+   10) Responsivo
+   ========================= */
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
   .cards-grid, .gallery-grid, .contact-grid { grid-template-columns: 1fr; }
+
   .nav-toggle { display: inline-block; }
   .site-nav { display: none; }
   .site-nav.is-open { display: block; }
